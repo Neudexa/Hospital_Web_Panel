@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetim Girişi - Özel Erişim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-gate-bg { background: linear-gradient(135deg, #1e1e2f, #0f0f1a); }
+        .secure-badge { background: rgba(239, 68, 68, 0.2); color: #f87171; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; margin-bottom: 1rem; display: inline-block; }
+    </style>
+</head>
+<body class="admin-gate-bg">
+    <div class="background-shapes">
+        <div class="shape shape-1" style="background: #ef4444; opacity: 0.2;"></div>
+    </div>
+
+    <div class="container">
+        <div class="glass-panel auth-panel" style="border-color: rgba(239, 68, 68, 0.3);">
+            <div class="auth-header">
+                <span class="secure-badge">GÜVENLİ YÖNETİCİ GİRİŞİ</span>
+                <h2>Admin Portalı</h2>
+                <p>Yetkisiz erişimler loglanmaktadır.</p>
+            </div>
+
+            <div id="admin-alert" class="alert hidden"></div>
+
+            <form id="admin-login-form">
+                <div class="input-group">
+                    <label>Yönetici Kimliği</label>
+                    <input type="text" id="admin-user" required autocomplete="off" placeholder="Kullanıcı adı">
+                </div>
+                <div class="input-group">
+                    <label>Güvenlik Anahtarı</label>
+                    <input type="password" id="admin-pass" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="primary-btn" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">Sisteme Gir</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin_script.js"></script>
+</body>
+</html>

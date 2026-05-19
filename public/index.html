@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş & Kayıt - Hastane Yönetim Sistemi</title>
+    <meta name="description" content="Güvenli Hastane Yönetim Sistemi Giriş ve Kayıt Portalı">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="container">
+        <div style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+            <a href="admin_gate.html" class="outline-btn" style="text-decoration: none; font-size: 0.8rem; padding: 8px 16px; border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);">🛡️ Yönetici Girişi</a>
+        </div>
+        
+        <div class="glass-panel auth-panel">
+            <div class="auth-header">
+                <h2>MHRS Benzeri Sistem</h2>
+                <p>Güvenli Sağlık Yönetim Sistemi</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="tab-login">Giriş Yap</button>
+                <button class="tab-btn" id="tab-register">Kayıt Ol</button>
+            </div>
+
+            <div id="alert-box" class="alert hidden"></div>
+
+            <!-- Giriş Formu -->
+            <form id="login-form" class="auth-form active">
+                <div class="input-group">
+                    <label for="login-username">Kullanıcı Adı</label>
+                    <input type="text" id="login-username" name="username" required autocomplete="username" placeholder="Kullanıcı adınızı girin">
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Şifre</label>
+                    <input type="password" id="login-password" name="password" required autocomplete="current-password" placeholder="••••••••">
+                </div>
+                <button type="submit" class="primary-btn">Giriş Yap</button>
+            </form>
+
+            <!-- Kayıt Formu -->
+            <form id="register-form" class="auth-form">
+                <div class="input-group">
+                    <label for="register-name">Ad Soyad</label>
+                    <input type="text" id="register-name" name="name" required placeholder="Dr. Ad Soyad">
+                </div>
+                <div class="input-group">
+                    <label for="register-username">Kullanıcı Adı (Min 4 Karakter)</label>
+                    <input type="text" id="register-username" name="username" required minlength="4" maxlength="20" autocomplete="off">
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Şifre (Min 6 Karakter)</label>
+                    <input type="password" id="register-password" name="password" required minlength="6" autocomplete="new-password">
+                </div>
+                <div class="input-group">
+                    <label for="register-role">Hesap Türü</label>
+                    <select id="register-role" name="role" style="width: 100%; padding: 1rem; border-radius: 12px; background: rgba(0,0,0,0.2); color: white; border: 1px solid var(--glass-border);">
+                        <option value="doctor">Doktor</option>
+                    </select>
+                </div>
+                <button type="submit" class="primary-btn">Kayıt Ol</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
